@@ -1,0 +1,51 @@
+ \documentclass[11pt, a4paper,spanish]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{caratula}
+\usepackage[ruled,vlined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{float}
+
+%\usepackage[ruled,vlined,boxed,commentsnumbered]{algorithm2e}
+
+% Encabezado y Pie de pagina
+\pagestyle{fancy}
+\fancyhf{}
+%\fancyfoot[L]{\leftmark}
+\fancyhead[L]{Ingeniería del Software 1}
+\fancyhead[R]{Trabajo Pr\'actico 1}
+\fancyfoot[R]{\thepage}
+
+
+\begin{document}
+
+% ------------ CARATULA ------------
+    \input{caratula}
+
+% ------------ INDICE ------------
+
+    \thispagestyle{empty}
+    \tableofcontents
+    \pagebreak
+
+
+% ------------ DIAGRAMA CONTEXTO ------------
+
+        \input{dc}
+
+% ------------ DIAGRAMA OBJETIVOS ------------
+
+%       \input{do}
+
+% ------------ REFERENCIAS ------------
+    \pagebreak
+%    \section{Referencias}
+%       \input{referencias}
+
+
+\end{document}
