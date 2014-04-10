@@ -1,0 +1,69 @@
+ 
+%
+% Primera parte.
+%
+\begin{subsection}{Descripción general}
+Lo que sigue es una breve descripción informal de lo que hemos interpretado a partir del enunciado del trabajo. El objetivo es la construcción de un sistema informático capaz de administrar eficientemente lo que será la \emph{red de ciclovías} del distrito de \emph{Mar Chiquita}.
+
+La red de ciclovías estará compuesta por estaciones donde se almacenan las bicletas disponibles para usuarios registrados. Cada estación tiene asignada un número determinado de bicicletas y por lo menos un empleado que las administra. El empleado atiende a los usuarios registrados que solicitan y devueven las unidades. Además, interactúa con el sistema actualizándolo con los datos de todos los movimientos de la estación que tiene a su cargo: préstamos y llegadas de unidades, penalización de usuarios, etc. El sistema también puede emitir alertas y notificaciones para estos encargados.
+
+Los empleados de las estaciones también se ocupan de recibir y atender a los camiones destinados al desplazamiento de unidades entre estaciones.
+\end{subsection}
+
+\begin{subsection}{Lista de fenómenos y objetivos}
+
+\begin{itemize}
+\item \textbf{Fenómenos que se desprenden del enunciado:}
+
+\begin{enumerate}
+\item El usuario se registra vía Internet.
+\item Si no está penalizado, el usuario registrado puede retirar solo una bicicleta en cualquiera de las estaciones.
+\item Ningún usuario puede retirar más de una bicicleta.
+\item El usuario debe entregar una bicicleta en uso en cualquiera de las estaciones en el plazo de una hora.
+\item Los usuarios que no devuelvan las bicicletas en tiempo y forma serán penalizados.
+\item Un usuario penalizado no puede retirar una bicicleta.
+\item Hay dos tipos de estaciones: periféricas y centrales.
+\item Todos van a la misma estación entre las 17 y 19hs.
+\item Las estaciones centrales tienen la mayor demanda en determinadas franjas horarias.
+\item Los usuarios no deben esperar más de 40 minutos por una bicicleta (\textbf{\emph{Objetivo blando}}).
+\item Deberían haber suficientes bicicletas en las estaciones centrales para que nadie tenga que esperar demasiado (\textbf{\emph{Objetivo blando}}).
+\item Solicitar reposición de bicicletas cuando una estación se queda sin bicis.
+\item Conocer la disponibilidad de bicicletas.
+\item Camiones transportarán bicicletas de una estación a otra.
+\item Seguridad en el resguardo de identidad.
+\item Almacenamiento de datos para estadísticas.
+\end{enumerate}
+
+\item \textbf{Fenómenos agregados:}
+
+\begin{enumerate}
+\item Cualquier persona puede comprobar online disponibilidad de bicicletas para cualquiera de las estaciones.
+\item El usuario solicita a empleado de una estación una bicicleta.
+\item El empleado consulta disponibilidad de bicicletas.
+\item El empleado valida al usuario y su reputación (penalizado/no penalizado).
+\item El empleado actualiza sistema (con el nuevo número de bicicletas, las que están en uso, estado del usuario).
+\item El empleado entrega bicicleta al usuario.
+\item Ante déficit de bicicletas en una o varias estaciones, el sistema determinará qué bicicletas desplazar de una estación a otra, según número de unidades en cada estación, bicicletas en uso y su destino, etc.
+\item El sistema almacenará los datos de todos los movimientos para estadísticas.
+\end{enumerate}
+
+\item \textbf{Sobre las penalizaciones:}
+
+\begin{enumerate}
+\item \textbf{\emph{Penalización de un día}}: cuando el usuario entrega una bicicleta en un plazo de 1 a 24hs.
+\item \textbf{\emph{Penalización de una semana}}: cuando el usuario entrega la bicicleta en un plazo de 1 a 7 días.
+\item \textbf{\emph{Expulsion}}: cuando el usuario entrega una bicicleta pasados los 7 días, o cuando directamente la roba.
+\end{enumerate}
+
+
+\item{Objetivos blandos}:
+Consideramos que:
+\begin{itemize}
+\item \emph{``Los usuarios no deben esperar más de 40 minutos por una bicicleta.''}
+\item \emph{``Deberían haber suficientes bicicletas en las estaciones centrales para que nadie tenga que esperar demasiado.''}
+\end{itemize}
+
+son objetivos blandos porque son cuestiones relativas a preferencias o aspiraciones de situaciones ideales, pero que de ninguna forma el sistema puede garantizar en todo momento.
+
+\end{itemize}
+\end{subsection} 

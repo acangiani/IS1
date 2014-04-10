@@ -10,7 +10,24 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{color}
 
+% Permite colocar tablas (y figuras) una al lado de la otra. Si no se usa este 
+% paquete, la única opción de LáteX es colocar las tablas y figuras una debajo de
+% la otra.
+\usepackage{subfigure}
+% Permite combinar celdas en las tabla.
+\usepackage{multirow}
+% Se define la constante para el color utilizado en los comentarios del 
+% pseudocódigo.
+\definecolor{verde}{rgb}{0, 0.39, 0}
+\usepackage{hyperref}
+% Esta instrucción permite especificar un 'espaciado entre párrafos' diferente al 
+% valor por defecto. El valor por defecto de LáteX para el espaciado de párrafos
+% hace que éstos se encuentren demasiado arrimados unos con otros.
+\setlength{\parskip}{2.5mm}
+% Para tachar factores.
+\usepackage{cancel}
 %\usepackage[ruled,vlined,boxed,commentsnumbered]{algorithm2e}
 
 % Encabezado y Pie de pagina
@@ -33,6 +50,12 @@
     \tableofcontents
     \pagebreak
 
+% ------------ INTRODUCCIÓN ------------
+
+\begin{section}{Introducción}
+        \input{introduccion}
+\end{section}
+\pagebreak
 
 % ------------ ESENARIOS POSIBLES ------------
 
