@@ -1,4 +1,4 @@
- \documentclass[11pt, a4paper,spanish]{article}
+\documentclass[11pt, a4paper,spanish]{article}
 \usepackage[spanish,activeacute]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{caratula}
@@ -34,13 +34,23 @@
     \pagebreak
 
 
+% ------------ ESENARIOS POSIBLES ------------
+
+\begin{section}{Escenarios}
+        \input{escenarios}
+\end{section}
+\pagebreak
+
 % ------------ DIAGRAMA CONTEXTO ------------
 
+\begin{section}{Modelo de agentes}
         \input{dc}
-
+\end{section}
+\pagebreak
 % ------------ DIAGRAMA OBJETIVOS ------------
-
-%       \input{do}
+\begin{section}{Modelo de objetivos}
+        \input{do}
+\end{section}\begin{flushleft}\end{flushleft}
 
 % ------------ REFERENCIAS ------------
     \pagebreak
