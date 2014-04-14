@@ -8,17 +8,24 @@ número no fue registrado, el sistema le pedirá que ingrese una contraseña par
 si dicho número ya estuviese asignado el sistema le informara al usuario que deberá acercarse a cualquier
 terminal del servicio para resolver su situación.
 
-Si la registración fue exitosa, el usuario podrá ingresar de forma opcional la siguiente información:
+Si la registración fue exitosa, el usuario deberá ingresar la siguiente información:
+	\begin{itemize}
+	\item Dirección donde reside.
+	\item Telefono de contacto.
+	\item Correo electrónico.
+	\end{itemize}
+	
+Opcionalmente también podrá ingresar la siguiente información:
+
 	\begin{itemize}
 	\item Nombre y apellido.
 	\item Género.
-	\item Dirección donde reside.
 	\item Edad.
 	\item Profesión.
+	\item Nivel de estudios.
 	\item Estado civil.
-	\item Correo electrónico.
 	\end{itemize}
-
+	
 Luego el sistema le informará que su cuenta ha sido creada, faltando solamente el paso de verificación, donde
 podrá acercarse a cualquier terminal con su D.N.I para confirmar la identidad del usuario. Luego de la 
 verificación, el usuario estará en condiciones de retirar una bicicleta desde cualquier terminal.
@@ -40,21 +47,33 @@ recibe el D.N.I del usuario y marca la bicicleta como recibida en el sistema(aum
 \end{subsection}
 
 \begin{subsection}{Chequeo de stock de bicicletas en una terminal}
+Cuando en una estación (periférica o central) el stock de bicicletas es menor a un umbral predeterminado, el sistema
+emite un pedido de reposición de stock hacía la empresa de transporte contratada. Dicha orden indica cuantas 
+bicicletas retirar de una o varias estaciones con exceso de stock.
 
 \end{subsection}
 
 \begin{subsection}{Una estación se queda sin acceso a internet}
+Cuando una estación se queda sin acceso a internet contará con una línea telefónica que le permitirá al encargado 
+de la estación comunicarse con un callcenter con acceso directo a los servidores del sistema. A través del telefono
+el encargado de la estación podrá realizar las mismas operaciones que ejecuta en el sistema:
+	\begin{itemize}
+	\item Verificar identidad de un usuario.
+	\item Prestar bicicletas a un usuario.
+	\item Recibir devoluciones de bicicletas.
+	\item Informar de penalizaciones si corresponde.
+	\end{itemize}
+	
+Con esta alternativa el sistema puede mantener actualizado el stock de la terminal afectada y eventualmente perdirle a la empresa la reposición o retiro de stock.
 
 \end{subsection}
 
 \begin{subsection}{Falla en la devolución de una bicicleta}
+Cuando un usuario devuelve una bicicleta en una estación, el encargado de la misma procederá a cargar la devolución en el sistema. Si el tiempo de prestamo fue superior a 1 hora, el sistema le informará al encargado la penalización correspondiente. Luego el encargado le informará al usuario que ha sido penalizado y le explicará cual es su sanción.
 
 \end{subsection} 
 
 \begin{subsection}{Un día en la empresa de transporte de bicicletas}
-
-\end{subsection}
-
-\begin{subsection}{Un día en el centro de estadísticas}
+El sistema emite una orden de relocalización de bicicletas hacia la empresa. Dicha orden indica cuantas bicicletas hay que retirar de una o varias terminales y el destino de las mismas. Luego de recibir la orden, la empresa envia uno de sus camiones a realizar el pedido.
 
 \end{subsection}
