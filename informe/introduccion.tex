@@ -69,21 +69,21 @@ Cada uno de estos objetivo blandos son tales por tratarse de cuestiones relativa
 \begin{subsection}{Hipótesis y presunciones}
 Describimos a continuación las hipótesis y presunciones 
 \begin{itemize}
-\item \textbf{Consultas de disponibilidad}: no se requiere de registración para consultar disponibilidad de unidades en todas las estaciones. Cualquier persona con acceso a la web podrá consultar la disponibilidad de unidades en todas las estaciones. O también, acercándose a cualquier estación de bicicletas.
+\item \textbf{Consultas de disponibilidad}: no se requiere de registración para consultar disponibilidad de unidades en todas las estaciones. Cualquier persona con acceso a la web podrá consultar la disponibilidad de unidades en todas las estaciones. 
 
-\item \textbf{Registración de nuevos usuarios}: los usarios podrán registrarse vía web, o acercándose a cualquier estación terminal y solicitándole el registro al empleado. Un usuario mismo no puede registrarse dos veces.
+\item \textbf{Registración de nuevos usuarios}: los usuarios podrán registrarse vía web, o acercándose a cualquier estación terminal a través del empleado si la estación cuenta con internet o bien comunicándose con el Callcenter desde la estación si no hay internet. Un usuario mismo no puede registrarse dos veces.
 
-\item \textbf{Unidades sin identificación}: las bicicletas no tendrán ningún tipo de identificación. Considerando que todas las unidades son exactamente iguales, la introducción de un \emph{id} sumaría una complejidad innecesaria en el sistema.
+\item \textbf{Unidades sin identificación}: las bicicletas no tendrán ningún tipo de identificación. Considerando que todas las unidades son exactamente iguales, la introducción de un \emph{id} sumaría una complejidad innecesaria en el sistema sin generar ningún benefició.
 
 \item \textbf{Desplazamiento de unidades entre estaciones}: la logística para el desplazamiento de unidades entre estaciones correrá por cuenta del sistema. Éste determinará de dónde retirar unidades y hacia dónde desplazarlas. Los camiones utilizarán esta información para el transporte de las unidades.
 
-\item \textbf{Determinación del umbral de unidades en cada estación}: este valor determina el número de bicicletas apropiado para responder a la demanda de unidades en las distintas franjas horarias del día. Estará determinado por los cómputos estadísticos de uso y funcionamiento. En principio, se definen franjas horarias en las cuales se espera que cada estación cuente con un número determinado de unidades. Cuando el número de bicletas se encuentra por debajo de este umbral, el sistema dispará altertas automáticas a la empresa transportista solicitando más unidades.
+\item \textbf{Determinación del umbral de unidades en cada estación}: este valor determina el número de bicicletas apropiado para responder a la demanda de unidades en las distintas franjas horarias del día. Estará determinado por los cómputos estadísticos de uso y funcionamiento. En principio, se definen franjas horarias en las cuales se espera que cada estación cuente con un número determinado de unidades. Cuando el número de bicletas se encuentra por debajo de este umbral, el sistema dispará altertas automáticas a la empresa transportista solicitando más unidades. Como el concepto de umbral varía a lo largo del día, el mismo incluye la movilización de bicicletas al fin del mismo para cubrir la demanda de bicicletas al inicio del día siguiente, eventos especiales, etc.
 
-\item \textbf{Normativa para las penalizaciones}: la normativa para las penalizaciones correrá por cuenta del gobierno de la ciudad, el cual recibe de manera automática las notificaciones relativas a los usuarios incumplidores. Será el gobierno el que determine las penas y/o multas para estos usuarios.
+\item \textbf{Normativa para las penalizaciones}: la normativa para las penalizaciones correrá por cuenta del gobierno de la ciudad, el cual puede consultar en el sistema a los usuarios incumplidores. Será el gobierno el que determine las penas y/o multas para estos usuarios y posteriormente si estas son resueltas, retirar las sanciones.
 
 \item \textbf{Almacenamiento de datos y cómputos estadísticos}: el sistema ofrece una interfaz de consulta para el cálculo de estadísticas, basado en el registro de todas las operaciones en cada una de las terminales. Estos cómputos estarán a cargo del gobierno de la ciudad, pero también existe la posibilidad de configurar elementos de cálculo en el sistema mismo.
 
-\item \textbf{Sistema de soporte basado en \textit{call-center}}: cuando por algún motivo una estación terminal pierda conexión a Internet, podrá continuar operando con el sistema comunicándose telefónica con un centro de operaciones alternativo. Este centro de 
+\item \textbf{Sistema de soporte basado en \textit{call-center}}: cuando por algún motivo una estación terminal pierda conexión a Internet, podrá continuar operando con el sistema comunicándose telefónica con un centro de operaciones alternativo. A través del mismo, el Encargado de la terminal puede realizar las mimas operaciones que normalmente realizaría si tuviera internet.
 
 \item \textbf{Espera de no mayor a 40 minutos}: el sistema garantiza que se hará todo lo posible para reducir el tiempo de espera, pero de ninguna manera asegura que la espera será menor a determina cantidad de minutos.
 
