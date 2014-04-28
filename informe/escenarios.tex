@@ -1,14 +1,11 @@
 
-\begin{subsection}{Registración de un usuario}
-
+\begin{subsection}{Registración de un usuario por internet}
 El usuario se conecta a internet con algún dispositivo(pc, tablet, smartphone) y accede a la página
 web del sistema de bicicletas de Mar Chiquita. Como el usuario no se encuentra registrado, necesita 
 registrarse para poder acceder al servicio. Para lograrlo deberá ingresar su número de D.N.I, si dicho
-número no fue registrado, el sistema le pedirá que ingrese una contraseña para proteger su cuenta. En cambio
-si dicho número ya estuviese asignado el sistema le informara al usuario que deberá acercarse a cualquier
-terminal del servicio para resolver su situación.
+número no fue registrado, el sistema le pedirá que ingrese una contraseña para proteger su cuenta.
 
-Si la registración fue exitosa, el usuario deberá ingresar la siguiente información:
+El usuario deberá ingresar la siguiente información:
 	\begin{itemize}
 	\item Dirección donde reside.
 	\item Telefono de contacto.
@@ -26,54 +23,91 @@ Opcionalmente también podrá ingresar la siguiente información:
 	\item Estado civil.
 	\end{itemize}
 	
-Luego el sistema le informará que su cuenta ha sido creada, faltando solamente el paso de verificación, donde
-podrá acercarse a cualquier terminal con su D.N.I para confirmar la identidad del usuario. Luego de la 
-verificación, el usuario estará en condiciones de retirar una bicicleta desde cualquier terminal.
+Luego el sistema le informará que su cuenta ha sido creada, faltando solamente el paso de verificación de la misma.
 
 Por otro lado si el sistema le hubiese informado que su D.N.I ya se encuentra registrado, el sistema le pedirá
 que vaya a cualquier terminal para verificar su identificación y corregir su situación.
-\end{subsection} 
+\end{subsection}
 
-\begin{subsection}{Retiro de una bicicleta}
+\begin{subsection}{Registración de un usuario en estación con internet}
+El Usuario también tiene la opción de registrarse cualquier terminal del sistema, la misma cuenta con una terminal
+con internet donde el usuario se registra de la misma forma que en el escenario anteriormente descripto.
+\end{subsection}
+
+\begin{subsection}{Registración de un usuario en estación sin internet }
+Cuando una estación se queda sin acceso a internet contará con una línea telefónica que le permitirá al Usuario 
+ comunicarse con el callcenter desde la estación. A través del Callcenter, se le pediran los mismo datos que si interactura con una terminal. Luego de proveer los datos, el callcenter le informará al Usuario que se encuentra registrado.
+\end{subsection}
+
+\begin{subsection}{Validar cuenta en terminal con internet}
+Un Usuario podrá acercarse a cualquier terminal con su D.N.I para confirmar los datos ingresados. Luego el Encargado de la terminal verificará en el sistema que los datos concuerden y que el Usuario es quien dice ser, luego el Usuario será informado que ya es un usuario activo y que puede habilitado a retirar bicicletas.
+\end{subsection}
+
+\begin{subsection}{Validar cuenta en terminal sin internet}
+Análogamente, si al momento en que el Usuario se acerca a una estación para verificar su cuenta, y la misma no cuenta con internet, el Encargado de la estación procederá a comunicarse con el Callcenter, constará con los datos provistos por el Usuario y validará que el Usuario es quien dice ser. El Callcenter le avisará al Encargado de que la cuenta fue valida y este último le comunicará al Usuario que ya es un usuario activo y esta habilitado a retirar bicicletas.
+\end{subsection}
+
+\begin{subsection}{Consultar stock de terminales}
+Cualquiera Persona, sea o no Usuario del sistema, podrá a través de internet verificar el stock de bicicletas de cualquier terminal.
+\end{subsection}
+
+\begin{subsection}{Registrar problemas en registración de usuarios}
+Cuando el Usuario se registra por internet o en una terminal, es posible que haya problemas de registración(número de DNI en uso, étc), por lo tanto el Usuario procederá a acercarse a cualquier terminal habilitada con su documentación(DNI) y explicará la situación. El encargado de la estación luego procederá registrar el problema en el sistema.
+\end{subsection}
+
+\begin{subsection}{Resolver problemas de registro}
+El Gobierno, podrá consultar al Sistema por Usuarios con problemas de registración y cuando el mismo resuelva el problema, procederá a darlos de baja. 
+\end{subsection}
+
+\begin{subsection}{Retiro de bicicleta en terminal con internet}
 Un usuario se acerca cualquier estación de su preferencia y se identifica ante el Encargado de la estación.
-Dicho encargado verifica que el D.N.I se encuentre registrado, concuerde con la identidad del usuario y que no tenga ninguna penalización. Si hay stock de bicicletas registra la entrega de la misma, caso contrario le informa al Usuario que no hay bicicletas disponibles y que debe aguardar a la reposición. El sistema se encarga de pedir la reposición de las mismas.
+Dicho encargado verifica que el D.N.I se encuentre registrado en el sistema, concuerde con la identidad del usuario y que no tenga ninguna penalización pendiente u otra bicicleta actualmente en prestamo. Luego procede a entregarle la bicicleta al Usuario y a actualizar el nuevo stock de la estación en la terminal.
+\end{subsection}
 
-\end{subsection} 
+\begin{subsection}{Usuarios inhabilitados que intentan retirar bicletas}
+Un usuario se considera inhabilitado para retirar bicletas si no está registrado, está penalizado por demorar más del tiempo estipulado en la devolución de una bicicleta o no devolvió una unidad retirada previamente. En el primer caso, basta que se registre exitosamente para poder retirar una bicicleta, en el resto de los caso, deberá acercarse al Gobierno para resolver su situación.
+\end{subsection}
 
-\begin{subsection}{Devolución de una bicicleta}
+\begin{subsection}{Retiro de bicicleta en terminal sin internet}
+Análogamente al caso donde si hay internet, el Encargado relizará a través del Callcenter la verificación del usuario y actualización de stock.
+\end{subsection}
+
+\begin{subsection}{Pedir reposición de bicicletas en terminal con internet}
+El sistema emite una orden de relocalización de bicicletas hacia la empresa. Dicha orden indica cuantas bicicletas hay que retirar de una o varias terminales y el destino de las mismas. Luego de recibir la orden, la empresa envia procederá a cumplir el pedido.
+\end{subsection}
+
+\begin{subsection}{Pedir reposición de bicicletas en terminal sin internet}
+Al igual que el caso anterior, si no hay comunicación directa con la Empresa de transportes, el sistema envia el pedido al Callcenter, este último se encarga de pasar el pedido a la Empresa de transportes y dejar constancia en el sistema de que el pedido fue recibido.
+\end{subsection}
+
+\begin{subsection}{Reposición de bicicletas con internet}
+Al contar con el pedido de reposición emitido, la Empresa de transportes pasa a retirar las bicicletas en las terminales indicadas, retirando el monto estipulado. En cada estación, los Encargados procederan a entregar las bicicletas pedidas y actualizar el stock en el sistema. Luego la empresa de transportes, entrega las bicicletas en la terminal de destino al encargado, que también procederá a actualizar el stock. Luego la Empresa le comunica al sistema que el pedido fue realizado con éxito.
+\end{subsection}
+
+\begin{subsection}{Reposición de bicicletas sin internet}
+Análogo al caso anterior, excepto que las estaciones donde no haya internet, el Encargado se comunicará con el Callcenter para que modificar el stock de la terminal y la notificación de la realización del pedido se realizará a través del Callcenter.
+\end{subsection}
+
+\begin{subsection}{Devolución de bicicleta en terminal con internet}
 Un usuario se acerca a cualquier estación donde pretenda devolver la bicicleta pedida. El encargado de la estación
-recibe el D.N.I del usuario y marca la bicicleta como recibida en el sistema(aumentado el stock disponible en la estación). En caso de que el D.N.I o el usuario no concuerden con los datos de a quien fue prestada la bicicleta el mismo será penalizado por suplantar la identidad de otro usuario. Por otro lado si el tiempo que tardó en devolver la bicicleta es superior a 1 hora, el usuario también será penalizado. Si el sistema informa que la devolución fue satisfactoria, el usuario estará habilitado a retirar otra bicicleta en cualquier estación de Mar Chiquita.
-
+recibe el D.N.I del usuario y marca la bicicleta como recibida en el sistema(aumentado el stock disponible en la estación).El Encargado procederá a informarle al Usuario si tiene penalizaciones pendientes, luego si no hay penalizaciones pendientes el Usuario, estará hablitado a retirar una bicicleta nuevamente.
 \end{subsection}
 
-\begin{subsection}{Chequeo de stock de bicicletas en una terminal}
-Cuando en una estación (periférica o central) el stock de bicicletas es menor a un umbral predeterminado, el sistema
-emite un pedido de reposición de stock hacía la empresa de transporte contratada. Dicha orden indica cuantas 
-bicicletas retirar de una o varias estaciones con exceso de stock.
-
+\begin{subsection}{Devolución de bicicleta en terminal sin internet}
+Análogo al caso anteriorm pero las consultas o actualizaciones en el sistema las realiza a través del Callcenter.
 \end{subsection}
 
-\begin{subsection}{Una estación se queda sin acceso a internet}
-Cuando una estación se queda sin acceso a internet contará con una línea telefónica que le permitirá al encargado 
-de la estación comunicarse con un callcenter con acceso directo a los servidores del sistema. A través del telefono
-el encargado de la estación podrá realizar las mismas operaciones que ejecuta en el sistema:
-	\begin{itemize}
-	\item Verificar identidad de un usuario.
-	\item Prestar bicicletas a un usuario.
-	\item Recibir devoluciones de bicicletas.
-	\item Informar de penalizaciones si corresponde.
-	\end{itemize}
-	
-Con esta alternativa el sistema puede mantener actualizado el stock de la terminal afectada y eventualmente perdirle a la empresa la reposición o retiro de stock.
-
+\begin{subsection}{Penalizar a un Usuario}
+Cuando un Usuario tarde más que el tiempo definido por el Gobierno para devolver una bicicleta(1 hora en principio), el Sistema procederá automáticamente a marcar al Usuario como penalizado sin devolución de la bicicleta. Más tarde, si el Usuario devuelve la bicicleta el sistema actualizará en la penalización generada que la bicicleta fue devuelta.
 \end{subsection}
 
-\begin{subsection}{Falla en la devolución de una bicicleta}
-Cuando un usuario devuelve una bicicleta en una estación, el encargado de la misma procederá a cargar la devolución en el sistema. Si el tiempo de prestamo fue superior a 1 hora, el sistema le informará al encargado la penalización correspondiente. Luego el encargado le informará al usuario que ha sido penalizado y le explicará cual es su sanción.
+\begin{subsection}{Resolver penalización de Usuarios}
+El Gobierno podrá en cualquier momento consultar si un Usuario esta penalizado y remover la penalización cuando considere que esta fue resuelta, cada vez que el Gobierno remueva una penalización el sistema le confirmará la remoción de la penalización del Usuario.
+\end{subsection}
 
-\end{subsection} 
+\begin{subsection}{Tomar nuevas decisiones}
+Existen dos propuestas para la toma de decisiones:
+En la primera opción propuesta el Sistema se encarga de almacenar toda la información(tiempos de devolución, penalizaciones, frequencias, étc) y lo procesará para que luego el Gobierno pueda tomar decisiones tales como ampliar o relocalizar estaciones, agregar bicicletas o cualquier otra decición concerniente a la red de ciclovías.
 
-\begin{subsection}{Un día en la empresa de transporte de bicicletas}
-El sistema emite una orden de relocalización de bicicletas hacia la empresa. Dicha orden indica cuantas bicicletas hay que retirar de una o varias terminales y el destino de las mismas. Luego de recibir la orden, la empresa envia uno de sus camiones a realizar el pedido.
-
+En la segunda opción propuesta el Sistema se encarga solamente de almacenar toda la información y luego el gobierno se responsabiliza de consultar y analizar la información del sistema, para tomar cualquier decición concerniente al sistema de ciclovías.
 \end{subsection}
