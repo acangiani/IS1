@@ -2,20 +2,30 @@
 %
 % Primera parte.
 %
+
 \begin{subsection}{Descripción general}
-Lo que sigue es una breve descripción informal de lo que hemos interpretado a partir del enunciado del trabajo. El objetivo es la construcción de un sistema informático capaz de administrar eficientemente lo que será la \emph{red de ciclovías} del distrito de \emph{Mar Chiquita}.
+Lo que sigue es una descripción general de lo que hemos interpretado a partir del enunciado del trabajo. Los detalles relativos a hipótesis y presunciones se explican en la sección siguiente.
 
-La red de ciclovías estará compuesta por estaciones donde se almacenan las bicletas disponibles para usuarios registrados. Cada estación tiene asignada un número determinado de bicicletas y por lo menos un empleado que las administra. El empleado atiende a los usuarios registrados que solicitan y devueven las unidades. Además, interactúa con el sistema actualizándolo con los datos de todos los movimientos de la estación que tiene a su cargo: préstamos y llegadas de unidades, penalización de usuarios, etc. El sistema también puede emitir alertas y notificaciones para estos encargados.
+El objetivo es la construcción de un sistema informático capaz de administrar y facilitar el uso de la nueva \emph{red de ciclovías} del distrito de \emph{Mar Chiquita}. La propuesta aspira a estimular el uso de bicletas como medio de transporte alternativo, y de esta forma se espera aliviar la red de transporte público, diminuir la circulación de autos particulares y reducir los altos niveles de sedimentarismo promoviendo la actividad física mediante el uso de la bicicleta.
 
-Los empleados de las estaciones también se ocupan de recibir y atender a los camiones destinados al desplazamiento de unidades entre estaciones.
+La red de ciclovías está compuesta por \emph{estaciones} donde se almacenan las bicletas disponibles para los usuarios. Estas estaciones se distribuyen en diversos puntos estratégicos del distrito. Cada estación tendrá asignada un número determinado de bicicletas y por lo menos un empleado que las administra.
+
+Se distinguen dos tipos de estaciones: \emph{periféricas} y \emph{centrales}. Las estaciones periféricas se ubican naturalmente en la periferia de la ciudad y suponemos que funcionan mayormente como puntos de salida y llegada desde las estaciones centrales por lo tanto, inferimos que también cuentan con horarios de gran demanda(presumiblemente por las mañanas). Las estaciones centrales son las de mayor demanda en los horarios centrales.
+
+Los empleados en las estaciones atienden a los usuarios registrados que solicitan y devuelven las unidades. Estos empleados accederán al flamante sistema a través de Internet, y registrarán todos los movimientos de las estaciones que tienen a su cargo, tales como registrar nuevos usuarios, registrar los préstamos y devoluciones de unidades, recibir y atender a los camiones destinados al desplazamiento de bicicletas entre estaciones, etc. El sistema también puede emitir alertas y notificaciones para estos encargados.
+
+El flamante sistema contará con un mecanismo de penalización para aquellos usuarios que no devuelvan las unidades en tiempo y forma según un normativa a definir por el Gobierno. Además ningún Usuario podrá tener en préstamo más de una bicicleta.
+
+Existirá un sistema soporte o \emph{Call Center} con acceso permanente al sistema central, que permitirá a las estaciones continuar operando cuando pierdan conexión a Internet. En estos casos, los empleados de las estaciones podrán comunicarse con este centro alternativo para registrar las operaciones de sus terminales y hacer las consultas pertinentes.
+
+Mencionamos por último que las operaciones registradas en el sistema permitirán realizar todo tipo de cómputos estadísticos con el fin de mejorar las decisiones a futuro que afecten el funcionamiento del sistema. Para ello, el sistema ofrecerá una interfaz de consulta que se describe más adelante.
+
 \end{subsection}
 
-\begin{subsection}{Lista de fenómenos y objetivos}
+\begin{subsection}{Listado de fenómenos y objetivos}
+Lo que sigue es un listado con los \emph{fenómenos} más relevantes del proyecto:
 
 \begin{itemize}
-\item \textbf{Fenómenos que se desprenden del enunciado:}
-
-\begin{enumerate}
 \item El usuario se registra vía Internet.
 \item Si no está penalizado, el usuario registrado puede retirar solo una bicicleta en cualquiera de las estaciones.
 \item Ningún usuario puede retirar más de una bicicleta.
@@ -23,47 +33,59 @@ Los empleados de las estaciones también se ocupan de recibir y atender a los ca
 \item Los usuarios que no devuelvan las bicicletas en tiempo y forma serán penalizados.
 \item Un usuario penalizado no puede retirar una bicicleta.
 \item Hay dos tipos de estaciones: periféricas y centrales.
-\item Todos van a la misma estación entre las 17 y 19hs.
+\item Las estaciones centrales tienen su mayor demanda entre las 17 y 19hs(hora pico).
 \item Las estaciones centrales tienen la mayor demanda en determinadas franjas horarias.
-\item Los usuarios no deben esperar más de 40 minutos por una bicicleta (\textbf{\emph{Objetivo blando}}).
-\item Deberían haber suficientes bicicletas en las estaciones centrales para que nadie tenga que esperar demasiado (\textbf{\emph{Objetivo blando}}).
-\item Solicitar reposición de bicicletas cuando una estación se queda sin bicis.
+\item Las estaciones periféricas tienen su mayor demanda presumiblemente por las mañanas.
+\item Poder solicitar reposición de bicicletas.
 \item Conocer la disponibilidad de bicicletas.
 \item Camiones transportarán bicicletas de una estación a otra.
 \item Seguridad en el resguardo de identidad.
 \item Almacenamiento de datos para estadísticas.
-\end{enumerate}
-
-\item \textbf{Fenómenos agregados:}
-
-\begin{enumerate}
 \item Cualquier persona puede comprobar online disponibilidad de bicicletas para cualquiera de las estaciones.
 \item El usuario solicita a empleado de una estación una bicicleta.
+\item El usuario consulta disponibilidad de bicicletas por internet.
 \item El empleado consulta disponibilidad de bicicletas.
-\item El empleado valida al usuario y su reputación (penalizado/no penalizado).
-\item El empleado actualiza sistema (con el nuevo número de bicicletas, las que están en uso, estado del usuario).
+\item El empleado valida la registración de un usuario. 
+\item El empleado puede ver si un usuario esta penalizado.
+\item El empleado actualiza sistema (stock de bicicletas bicicletas, estado del usuario).
 \item El empleado entrega bicicleta al usuario.
 \item Ante déficit de bicicletas en una o varias estaciones, el sistema determinará qué bicicletas desplazar de una estación a otra, según número de unidades en cada estación, bicicletas en uso y su destino, etc.
-\item El sistema almacenará los datos de todos los movimientos para estadísticas.
-\end{enumerate}
+\item El sistema almacenará los datos de todos los movimientos para eventuales cómputos estadísticos.
+\end{itemize}
 
-\item \textbf{Sobre las penalizaciones:}
+Lo siguiente es la lista de \emph{objetivos blandos} considerados:
 
-\begin{enumerate}
-\item \textbf{\emph{Penalización de un día}}: cuando el usuario entrega una bicicleta en un plazo de 1 a 24hs.
-\item \textbf{\emph{Penalización de una semana}}: cuando el usuario entrega la bicicleta en un plazo de 1 a 7 días.
-\item \textbf{\emph{Expulsion}}: cuando el usuario entrega una bicicleta pasados los 7 días, o cuando directamente la roba.
-\end{enumerate}
-
-
-\item{Objetivos blandos}:
-Consideramos que:
 \begin{itemize}
-\item \emph{``Los usuarios no deben esperar más de 40 minutos por una bicicleta.''}
-\item \emph{``Deberían haber suficientes bicicletas en las estaciones centrales para que nadie tenga que esperar demasiado.''}
+\item \emph{``Reducir el sobrepeso en la población.''}
+\item \emph{``Aliviar el transporte público y reducir el número de autos particulares.''}
+\item \emph{``Sistema escalable.''}
+\item \emph{``Minimizar el tiempo de espera de los usuarios en las estaciones.''}
 \end{itemize}
 
-son objetivos blandos porque son cuestiones relativas a preferencias o aspiraciones de situaciones ideales, pero que de ninguna forma el sistema puede garantizar en todo momento.
+Cada uno de estos objetivo blandos son tales por tratarse de cuestiones relativas a preferencias o aspiraciones de situaciones ideales, pero que de ninguna forma el sistema puede garantizar en todo momento.
 
-\end{itemize}
 \end{subsection} 
+
+\begin{subsection}{Hipótesis y presunciones}
+Describimos a continuación las hipótesis y presunciones 
+\begin{itemize}
+\item \textbf{Consultas de disponibilidad}: no se requiere de registración para consultar disponibilidad de unidades en todas las estaciones. Cualquier persona con acceso a la web podrá consultar la disponibilidad de unidades en todas las estaciones. O también, acercándose a cualquier estación de bicicletas.
+
+\item \textbf{Registración de nuevos usuarios}: los usarios podrán registrarse vía web, o acercándose a cualquier estación terminal y solicitándole el registro al empleado. Un usuario mismo no puede registrarse dos veces.
+
+\item \textbf{Unidades sin identificación}: las bicicletas no tendrán ningún tipo de identificación. Considerando que todas las unidades son exactamente iguales, la introducción de un \emph{id} sumaría una complejidad innecesaria en el sistema.
+
+\item \textbf{Desplazamiento de unidades entre estaciones}: la logística para el desplazamiento de unidades entre estaciones correrá por cuenta del sistema. Éste determinará de dónde retirar unidades y hacia dónde desplazarlas. Los camiones utilizarán esta información para el transporte de las unidades.
+
+\item \textbf{Determinación del umbral de unidades en cada estación}: este valor determina el número de bicicletas apropiado para responder a la demanda de unidades en las distintas franjas horarias del día. Estará determinado por los cómputos estadísticos de uso y funcionamiento. En principio, se definen franjas horarias en las cuales se espera que cada estación cuente con un número determinado de unidades. Cuando el número de bicletas se encuentra por debajo de este umbral, el sistema dispará altertas automáticas a la empresa transportista solicitando más unidades.
+
+\item \textbf{Normativa para las penalizaciones}: la normativa para las penalizaciones correrá por cuenta del gobierno de la ciudad, el cual recibe de manera automática las notificaciones relativas a los usuarios incumplidores. Será el gobierno el que determine las penas y/o multas para estos usuarios.
+
+\item \textbf{Almacenamiento de datos y cómputos estadísticos}: el sistema ofrece una interfaz de consulta para el cálculo de estadísticas, basado en el registro de todas las operaciones en cada una de las terminales. Estos cómputos estarán a cargo del gobierno de la ciudad, pero también existe la posibilidad de configurar elementos de cálculo en el sistema mismo.
+
+\item \textbf{Sistema de soporte basado en \textit{call-center}}: cuando por algún motivo una estación terminal pierda conexión a Internet, podrá continuar operando con el sistema comunicándose telefónica con un centro de operaciones alternativo. Este centro de 
+
+\item \textbf{Espera de no mayor a 40 minutos}: el sistema garantiza que se hará todo lo posible para reducir el tiempo de espera, pero de ninguna manera asegura que la espera será menor a determina cantidad de minutos.
+
+\end{itemize}
+\end{subsection}
